@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  [data-theme="dark"] {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer components {
+  .bg-gradient {
+    @apply bg-gradient-to-r from-hot-pink via-neon-cyan to-electric-yellow;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
